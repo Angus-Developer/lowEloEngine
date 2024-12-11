@@ -1,3 +1,5 @@
 # lowEloEngine
 
-THIS ENGINE IS MADE FOR SIMPLICITY OVER EFFIENCY. FOR THAT REASON, THIS BOT WILL NOT LOOK 10, 15... MOVES AHEAD LIKE MANY TOP ENGINES, INCLUDING BUT NOT LIMITED TO StockFish, Lc0, and Mittens.
+**This engine is made for simplicity over efficiency. For that reason, this bot will not look 10, 15... moves ahead like many top engines, including but not limited to StockFish, Lc0, and Mittens.**
+
+This is a chess client in which I have built my bot around, just for simplicities sake. Therefor this bot has no implementation with Lichess Bot API, or compatability with chess bot GUIs like Cute Chess or Arena Chess GUI.
