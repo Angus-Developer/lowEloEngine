@@ -6,4 +6,7 @@ This is a chess client in which I have built my bot around, just for simplicitie
 
 The 'main' branch has a custom made chess client, completely from scratch and not using a library such as python-chess. One reason for this is so that I can learn how chess for another project, and because I want to, and feel it would be a good exercise, as well as at least for me easier engine implementation.
 
-Currently, once a pawn reaches the end of the board, it is automatically made a Queen. I will be working on a way to select which piece to promote to.
+<br>
+
+## How to run
+Download the .zip from the latest release. After unzipping, enter `pip install -r requirements.txt` into the terminal to install the required python package. Then run `ChessMain.py` and enjoy versing my engine
