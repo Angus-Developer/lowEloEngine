@@ -9,4 +9,4 @@ The 'main' branch has a custom made chess client, completely from scratch and no
 <br>
 
 ## How to run
-Download the .zip from the latest release. After unzipping, run `ChessMain.py` and enjoy versing my engine
+Download the .zip from the latest release. After unzipping, enter `pip install -r requirements.txt` into the terminal to install the required python package. Then run `ChessMain.py` and enjoy versing my engine
