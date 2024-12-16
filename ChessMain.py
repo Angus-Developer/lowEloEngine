@@ -35,7 +35,7 @@ def main():
     sqSelected = () # No square is selected, keep track of the last user click (tuple: (row, col))
     playerClicks = [] # Keep track of player clicks (two tuples: [(6,4), (4, 4)])
     gameOver = False
-    playerOne = False # If a Human is playing white, then this will be True. If an AI is playing white, this will be False
+    playerOne = True # If a Human is playing white, then this will be True. If an AI is playing white, this will be False
     playerTwo = False # If a Human is playing black, then this will be True. If an AI is playing white, this will be True. Set both values to False for the AI to play itself
     while running:
         humanTurn = (gs.whiteToMove and playerOne) or (not gs.whiteToMove and playerTwo)
@@ -82,7 +82,9 @@ def main():
 
         # AI move finder
         if not gameOver and not humanTurn:
-            AIMove = SmartMoveFinder.findRandomMove(validMoves)
+            AIMove = SmartMoveFinder.findBestMove(gs, validMoves)
+            if AIMove is None:
+                AIMove = SmartMoveFinder.findRandomMove(validMoves)
             gs.makeMove(AIMove)
             moveMade = True
             animate = True
@@ -96,13 +98,13 @@ def main():
 
         drawGameState(screen, gs, validMoves, sqSelected)
 
-        if gs.checkMate:
+        if gs.checkmate:
             gameOver = True
             if gs.whiteToMove:
                 drawText(screen, 'Black wins by checkmate')
             else:
                 drawText(screen, 'White wins by checkmate')
-        elif gs.staleMate:
+        elif gs.stalemate:
             gameOver = True
             drawText(screen, 'Stalemate')
 
